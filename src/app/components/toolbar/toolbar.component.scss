@@ -11,6 +11,7 @@
       font-family: "Saira Stencil One", sans-serif;
       font-weight: 400;
       font-style: normal;
+      color: var(--text-color-primary);
     }
   }
 
@@ -33,6 +34,7 @@
         border: 0px;
         padding: 8px 16px;
         background-color: var(--background-color);
+        color: var(--text-color-secondary);
       }
 
       .search-icon {
@@ -40,6 +42,7 @@
         position: absolute;
         right: 0;
         margin-right: 16px;
+        color: var(--text-color-secondary);
       }
 
       .search-icon:hover {
@@ -56,6 +59,7 @@
 
       .local-mall-icon {
         cursor: pointer;
+        color: var(--text-color-secondary);
       }
 
       .local-mall-icon:hover {

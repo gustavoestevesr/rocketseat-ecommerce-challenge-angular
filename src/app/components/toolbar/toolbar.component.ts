@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -14,7 +14,8 @@ export class ToolbarComponent {
   productInCheckout = 0;
   searchbarInput = ''
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  router = inject(Router);
+  route = inject(ActivatedRoute);
 
   searchProduct() {
     if (this.searchbarInput.length > 0) {
