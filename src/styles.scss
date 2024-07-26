@@ -3,7 +3,10 @@
 :root {
   --background-color: #F3F5F6;
   --badge-color: #DE3838;
-  --hover-effect-color: brown;
+  --hover-effect-color:#FFA585;
+  --border-bottom-color: #FFA585;
+  --text-color-primary: #5D5D6D;
+  --text-color-secondary: #737380;
 }
 
 * {
@@ -13,4 +16,9 @@
   font-family: "Saira", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
 }
