@@ -1,0 +1,21 @@
+<main class="main-container">
+  <div class="container">
+    <div class="filters-container">
+      <div class="categories-filter">
+        @for (category of categories; track $index) {
+        <span
+          [ngClass]="{ activated: isActive(category) }"
+          class="category-label"
+          (click)="activateCategory(category)"
+          >{{ category }}</span
+        >
+        }
+      </div>
+      <div class="order-by-container">
+        <select class="order-by-select">
+          <option class="order-by-option" [value]="null">Organizar por</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</main>
