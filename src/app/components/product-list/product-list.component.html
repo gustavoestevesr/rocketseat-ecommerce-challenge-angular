@@ -1,6 +1,7 @@
 <main class="main-container">
   <div class="container">
-    <div class="filters-container">
+    <section class="filters-container">
+      <!-- Categories -->
       <div class="categories-filter">
         @for (category of categories; track $index) {
         <span
@@ -11,6 +12,7 @@
         >
         }
       </div>
+      <!-- Order By -->
       <div class="order-by-container">
         <select
           class="order-by-select"
@@ -29,6 +31,14 @@
           </option>
         </select>
       </div>
-    </div>
+    </section>
+    <section class="pagination-container">
+
+    </section>
+    <section class="product-list-container">
+      @for (product of productsList; track $index) {
+        <app-product-card [image]="product.image" [title]="product.title" [price]="product.price"></app-product-card>
+      }
+    </section>
   </div>
 </main>
