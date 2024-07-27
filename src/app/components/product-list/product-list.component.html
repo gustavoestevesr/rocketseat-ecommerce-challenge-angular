@@ -6,14 +6,27 @@
         <span
           [ngClass]="{ activated: isActive(category) }"
           class="category-label"
-          (click)="activateCategory(category)"
+          (click)="changeCategory(category)"
           >{{ category }}</span
         >
         }
       </div>
       <div class="order-by-container">
-        <select class="order-by-select">
-          <option class="order-by-option" [value]="null">Organizar por</option>
+        <select
+          class="order-by-select"
+          [(ngModel)]="orderBySelected"
+          (ngModelChange)="changeOrderBy()"
+        >
+          <option class="order-by-option" [value]="null" disabled>
+            Organizar por
+          </option>
+          <option
+            class="order-by-option"
+            *ngFor="let orderBy of orderByOptions; let i = index"
+            [value]="orderBy"
+          >
+            {{ orderBy }}
+          </option>
         </select>
       </div>
     </div>
