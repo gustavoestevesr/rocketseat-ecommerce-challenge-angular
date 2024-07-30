@@ -37,7 +37,7 @@
     </section>
     <section class="product-list-container">
       @for (product of productsList; track $index) {
-        <app-product-card [image]="product.image" [title]="product.title" [price]="product.price"></app-product-card>
+        <app-product-card [id]="product.id" [image]="product.image" [title]="product.title" [price]="product.price"></app-product-card>
       }
     </section>
   </div>

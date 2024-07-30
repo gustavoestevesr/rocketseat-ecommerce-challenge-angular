@@ -1,5 +1,6 @@
 import { NgOptimizedImage } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-card',
@@ -9,9 +10,12 @@ import { Component, Input } from '@angular/core';
   styleUrl: './product-card.component.scss'
 })
 export class ProductCardComponent {
+  @Input() id = '';
   @Input() image = '';
   @Input() title = '';
   @Input() price = 0;
   @Input() isActive = false;
   @Input() onSale = false;
+
+  route = inject(Router)
 }
