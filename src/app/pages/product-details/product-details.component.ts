@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { GetProductsService } from '../../services/get-products.service';
 import { Product } from '../../models/product.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
@@ -16,6 +16,7 @@ export class ProductDetailsComponent implements OnInit {
 
   productService = inject(GetProductsService)
   route = inject(ActivatedRoute)
+  router = inject(Router)
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -24,5 +25,9 @@ export class ProductDetailsComponent implements OnInit {
         this.productSelected = this.productService.getOne(productId);
       }
     });
+  }
+
+  addCart(): void {
+
   }
 }

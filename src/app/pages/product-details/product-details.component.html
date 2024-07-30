@@ -1,1 +1,58 @@
-<img [ngSrc]="productSelected?.image || ''" alt="" width="600" height="600">
+<div class="container">
+  <!-- NAVIGATION -->
+  <div class="navigation-container">
+    <span
+      class="arrow-back-icon material-icons-outlined"
+      title="arrow_circle_left"
+      (click)="router.navigate([''])"
+    >
+      arrow_circle_left
+    </span>
+  </div>
+
+  <main>
+    <section class="product-image">
+      <img
+        [src]="productSelected?.image || ''"
+        [alt]="productSelected?.title || 'Product image'"
+        width="100%"
+        height="100%"
+      />
+    </section>
+    <section class="product-info">
+      <div class="info">
+        <h5>{{ productSelected?.category }}</h5>
+        <h2>{{ productSelected?.title }}</h2>
+        <h3>R$ {{ productSelected?.price }}</h3>
+        <small>
+          *Frete de R$40,00 para todo o Brasil. Grátis para compras acima de
+          R$100,00.
+        </small>
+      </div>
+
+      <div class="description">
+        <h3>Descrição</h3>
+        <h5>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores vero
+          dolorum accusantium repellendus, incidunt sit ipsa magnam libero
+          excepturi quis. Ad quaerat animi, magni quasi voluptatum dolores quo
+          sunt dicta doloremque itaque, fuga omnis! Dignissimos pariatur
+          consectetur iure optio asperiores tenetur, animi amet? Praesentium
+          nostrum sit delectus quas. Omnis, perferendis!
+        </h5>
+      </div>
+
+      <div class="spacer"></div>
+
+      <button class="cart-button" (click)="addCart()">
+        <span
+          class="archive-icon material-icons-outlined"
+          title="archive"
+        >
+          archive
+        </span>
+        ADICIONAR AO CARRINHO
+      </button>
+    </section>
+  </main>
+</div>
