@@ -25,7 +25,7 @@ export class ProductListComponent {
   getProductsService = inject(GetProductsService);
 
   constructor() {
-    this.getProductsService.getAll().subscribe((data) => this.productsList = data);
+    this.productsList = this.getProductsService.getFilteredList();
   }
 
   changeCategory(categorySelected: EnumCategories) {
