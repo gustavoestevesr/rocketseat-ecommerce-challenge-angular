@@ -3,6 +3,7 @@ import { Product } from "../models/product.model";
 const PRODUCT_LIST: Product[] = [
   {
     id: '0001',
+    category: 'CANECA',
     image: 'https://cdn.pixabay.com/photo/2020/04/25/08/44/mug-5089934_1280.jpg',
     title: 'Caneca de porselanato',
     price: 220,
@@ -12,6 +13,7 @@ const PRODUCT_LIST: Product[] = [
   },
   {
     id: '0002',
+    category: 'CANECA',
     image: 'https://cdn.pixabay.com/photo/2020/04/25/08/44/mug-5089934_1280.jpg',
     title: 'Caneca de porselanato',
     price: 220,
@@ -21,6 +23,7 @@ const PRODUCT_LIST: Product[] = [
   },
   {
     id: '0003',
+    category: 'CANECA',
     image: 'https://cdn.pixabay.com/photo/2020/04/25/08/44/mug-5089934_1280.jpg',
     title: 'Caneca de porselanato',
     price: 220,
@@ -30,6 +33,7 @@ const PRODUCT_LIST: Product[] = [
   },
   {
     id: '0004',
+    category: 'CANECA',
     image: 'https://cdn.pixabay.com/photo/2020/04/25/08/44/mug-5089934_1280.jpg',
     title: 'Caneca de porselanato',
     price: 220,
@@ -39,6 +43,7 @@ const PRODUCT_LIST: Product[] = [
   },
   {
     id: '0005',
+    category: 'CANECA',
     image: 'https://cdn.pixabay.com/photo/2020/04/25/08/44/mug-5089934_1280.jpg',
     title: 'Caneca de porselanato',
     price: 220,
@@ -48,6 +53,7 @@ const PRODUCT_LIST: Product[] = [
   },
   {
     id: '0006',
+    category: 'CANECA',
     image: 'https://cdn.pixabay.com/photo/2020/04/25/08/44/mug-5089934_1280.jpg',
     title: 'Caneca de porselanato',
     price: 220,
@@ -57,6 +63,7 @@ const PRODUCT_LIST: Product[] = [
   },
   {
     id: '0007',
+    category: 'CANECA',
     image: 'https://cdn.pixabay.com/photo/2020/04/25/08/44/mug-5089934_1280.jpg',
     title: 'Caneca de porselanato',
     price: 220,
@@ -66,6 +73,7 @@ const PRODUCT_LIST: Product[] = [
   },
   {
     id: '0008',
+    category: 'CANECA',
     image: 'https://cdn.pixabay.com/photo/2020/04/25/08/44/mug-5089934_1280.jpg',
     title: 'Caneca de porselanato',
     price: 220,
@@ -75,6 +83,7 @@ const PRODUCT_LIST: Product[] = [
   },
   {
     id: '0009',
+    category: 'CANECA',
     image: 'https://cdn.pixabay.com/photo/2020/04/25/08/44/mug-5089934_1280.jpg',
     title: 'Caneca de porselanato',
     price: 220,
