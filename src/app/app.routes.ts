@@ -5,12 +5,20 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 
 export const routes: Routes = [
   {
-    path: '', component: ProductListComponent
+    path: '',
+    pathMatch: 'full',
+    component: ProductListComponent,
   },
   {
-    path: 'productDetails/:productId', component: ProductDetailsComponent
+    path: 'products',
+    component: ProductListComponent,
   },
   {
-    path: 'checkout', component: CheckoutComponent
+    path: 'productDetails/:productId',
+    component: ProductDetailsComponent,
+  },
+  {
+    path: 'checkout',
+    component: CheckoutComponent,
   },
 ];
