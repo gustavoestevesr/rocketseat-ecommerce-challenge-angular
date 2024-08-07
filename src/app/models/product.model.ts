@@ -7,4 +7,6 @@ export interface Product {
   quantity: number;
   enable: boolean;
   onSale: boolean;
+  qtdSold: number;
+  createAt: string;
 }
