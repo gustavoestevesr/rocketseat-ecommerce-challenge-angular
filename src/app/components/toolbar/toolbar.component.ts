@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -11,11 +12,11 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './toolbar.component.scss'
 })
 export class ToolbarComponent {
-  productInCheckout = 0;
   searchbarInput = ''
 
   router = inject(Router);
   route = inject(ActivatedRoute);
+  cartService = inject(CartService)
 
   searchProduct() {
     if (this.searchbarInput.length > 0) {
@@ -45,5 +46,9 @@ export class ToolbarComponent {
       queryParams: {},
       queryParamsHandling: ''
     });
+  }
+
+  getQtdProducts() {
+    return this.cartService.getQtdProducts();
   }
 }

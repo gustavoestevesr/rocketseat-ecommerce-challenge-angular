@@ -2,7 +2,8 @@
 
 .toolbar {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   height: 70px;
 
@@ -12,6 +13,10 @@
       font-weight: 400;
       font-style: normal;
       color: var(--text-color-primary);
+    }
+    h1:hover {
+      cursor: pointer;
+      color: var(--hover-effect-color);
     }
   }
 

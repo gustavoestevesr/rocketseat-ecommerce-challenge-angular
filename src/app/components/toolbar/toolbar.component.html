@@ -1,7 +1,7 @@
-<div class="toolbar">
+<div class="toolbar container">
   <!-- brand -->
   <div class="brand">
-    <h1>capputeeno</h1>
+    <h1 (click)="router.navigate([''])">capputeeno</h1>
   </div>
   <!-- searchbar e checkout -->
   <div class="searchbar-checkout-container">
@@ -16,16 +16,16 @@
         [(ngModel)]="searchbarInput"
         (keydown.enter)="searchProduct()"
       />
-      <span class="search-icon material-icons-outlined" title="search" (click)="searchProduct()">
+      <span class="search-icon material-icons-outlined" title="Pesquisa de produtos" (click)="searchProduct()">
         search
       </span>
     </div>
     <!-- checkout -->
     <div class="checkout-container">
-      <span class="local-mall-icon material-icons-outlined" title="checkout">
+      <span class="local-mall-icon material-icons-outlined" title="Carrinho de compras" (click)="router.navigate(['checkout'])">
         local_mall
       </span>
-      <div class="badge-counter-product">{{ productInCheckout }}</div>
+      <div class="badge-counter-product">{{ getQtdProducts() }}</div>
     </div>
   </div>
 </div>
