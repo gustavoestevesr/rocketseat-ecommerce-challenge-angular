@@ -24,27 +24,27 @@
         <h5>{{ productSelected?.category }}</h5>
         <h2>{{ productSelected?.title }}</h2>
         <h3>R$ {{ productSelected?.price }}</h3>
-        <small>
-          *Frete de R$40,00 para todo o Brasil. Grátis para compras acima de
+        <p>
+          * Frete de R$40,00 para todo o Brasil. Grátis para compras acima de
           R$100,00.
-        </small>
+        </p>
       </div>
 
       <div class="description">
         <h3>Descrição</h3>
-        <h5>
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores vero
           dolorum accusantium repellendus, incidunt sit ipsa magnam libero
           excepturi quis. Ad quaerat animi, magni quasi voluptatum dolores quo
           sunt dicta doloremque itaque, fuga omnis! Dignissimos pariatur
           consectetur iure optio asperiores tenetur, animi amet? Praesentium
           nostrum sit delectus quas. Omnis, perferendis!
-        </h5>
+        </p>
       </div>
 
       <div class="spacer"></div>
 
-      <button class="cart-button" (click)="addCart()">
+      <button class="cart-button" (click)="addCart(productSelected)">
         <span
           class="archive-icon material-icons-outlined"
           title="archive"

@@ -1,8 +1,10 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { GetProductsService } from '../../services/get-products.service';
-import { Product } from '../../models/product.model';
-import { ActivatedRoute, Router } from '@angular/router';
 import { NgOptimizedImage } from '@angular/common';
+import { Component, inject, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Observable, of } from 'rxjs';
+import { Product } from '../../models/product.model';
+import { ProductsService } from '../../services/products.service';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product-details',
@@ -14,7 +16,8 @@ import { NgOptimizedImage } from '@angular/common';
 export class ProductDetailsComponent implements OnInit {
   productSelected!: Product | null;
 
-  productService = inject(GetProductsService)
+  cartService = inject(CartService)
+  productService = inject(ProductsService)
   route = inject(ActivatedRoute)
   router = inject(Router)
 
@@ -22,12 +25,14 @@ export class ProductDetailsComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       const productId = params.get('productId');
       if (productId) {
-        this.productSelected = this.productService.getOne(productId);
+        this.productService.getOne(productId).subscribe((product) => this.productSelected = product);
       }
     });
   }
 
-  addCart(): void {
-
+  addCart(productSelected: Product | null): void {
+    if (productSelected) {
+      this.cartService.addProduct(productSelected)
+    }
   }
 }

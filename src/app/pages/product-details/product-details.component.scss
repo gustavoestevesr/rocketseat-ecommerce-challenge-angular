@@ -49,6 +49,19 @@
           font-weight: 400;
           color: var(--text-color-secondary);
         }
+
+        h2 {
+          font-size: xx-large;
+        }
+
+        h3 {
+          font-size: x-large;
+          font-weight: 500;
+        }
+
+        h5 {
+          font-size: medium;
+        }
       }
 
       .description {
@@ -56,12 +69,14 @@
           color: var(--text-color-secondary);
           font-weight: 400;
           margin-bottom: 8px;
+          font-size: x-large;
         }
 
-        h5 {
-          line-height: 1.5;
+        p {
           font-weight: 400;
-          letter-spacing: 1.2px;
+          letter-spacing: 1.1px;
+          font-size: medium;
+          text-align: justify;
         }
       }
     }
@@ -80,6 +95,7 @@
       color: white;
       padding: 6px;
       border-radius: 5px;
+      font-size: medium;
     }
   }
 }
