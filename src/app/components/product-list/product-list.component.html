@@ -7,7 +7,7 @@
         <span
           [ngClass]="{ activated: isActive(category) }"
           class="category-label"
-          (click)="changeCategory(category)"
+          (click)="onCategoryChange(category)"
           >{{ category }}</span
         >
         }
@@ -16,8 +16,7 @@
       <div class="order-by-container">
         <select
           class="order-by-select"
-          [(ngModel)]="orderBySelected"
-          (ngModelChange)="changeOrderBy()"
+          [formControl]="orderByFormControl"
         >
           <option class="order-by-option" [value]="null" disabled>
             Organizar por
@@ -36,7 +35,7 @@
 
     </section>
     <section class="product-list-container">
-      @for (product of productsList; track $index) {
+      @for (product of filteredProducts; track $index) {
         <app-product-card [id]="product.id" [image]="product.image" [title]="product.title" [price]="product.price"></app-product-card>
       }
     </section>
