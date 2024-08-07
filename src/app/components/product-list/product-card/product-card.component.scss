@@ -1,17 +1,27 @@
 .card-container {
-  width: 100%;
-  max-width: 250px;
+  background-color: white;
+  border-radius: 8px 8px 0 0;
 
-  img {
-    width: 250px;
-    height: 250px;
-    border-radius: 5px;
-    cursor: pointer;
+  .img-container {
+    min-width: 300px;
+    min-height: 250px;
+    position: relative;
+
+    img {
+      cursor: pointer;
+    }
+
+    img:hover {
+      transform: scale(1.5);
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.2s;
+      z-index: 9;
+    }
   }
 
   .info-container {
-    width: 250px;
-    padding: 4px;
+    width: 100%;
+    padding: 12px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -32,4 +42,10 @@
       font-weight: 600;
     }
   }
+}
+
+.text-overflow-ellipses {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

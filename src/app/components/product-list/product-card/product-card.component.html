@@ -1,13 +1,14 @@
 <div class="card-container">
-  <img
+  <div class="img-container">
+    <img
     [ngSrc]="image"
     alt=""
-    width="250"
-    height="250"
+    fill
     (click)="route.navigate(['productDetails/' + id])"
   />
+  </div>
   <div class="info-container">
-    <p class="product-title">{{ title }}</p>
+    <p class="product-title text-overflow-ellipses" [title]="title">{{ title }}</p>
     <div class="separator-bar"></div>
     <p class="product-price">R$ {{ price }}</p>
   </div>
